@@ -1,6 +1,12 @@
 # Return Practice #1
 # Create a function called power that takes two numeric values as arguments. It must return the number that results from solving a power, using the first number as the base, and the second as the exponent
 
+def power(a, b):
+    c = a * b
+    return c
+
+print(power(1, 21))
+
 
 
 
@@ -31,12 +37,12 @@ print(used_to_eur(dollars))
 
 # Hint: inside the created function, you should use string methods already seen.
 
-word = "word"
+word = "chocolate"
 def reverse_word(word):
     word = list(word)
     word.reverse()
-    word = str(word)
-    word.upper()
+    word = "".join(word)
+    word = word.upper()
     return word
 
-print(reverse_word)
+print(reverse_word(word))
