@@ -14,7 +14,12 @@
 
 # Hint: to perform the conversion, the function internally must multiply this value in dollars by 0.90 to obtain the equivalent amount in euros.
 
+dollars = 184.44
+def used_to_eur(dollars):
+    eur = dollars * 0.9
+    return eur
 
+print(used_to_eur(dollars))
 
 
 # Return Practice #3
@@ -25,3 +30,13 @@
 # Also, you must create a variable called word, which contains any string, to pass it as an argument to the created function.
 
 # Hint: inside the created function, you should use string methods already seen.
+
+word = "word"
+def reverse_word(word):
+    word = list(word)
+    word.reverse()
+    word = str(word)
+    word.upper()
+    return word
+
+print(reverse_word)
