@@ -17,6 +17,22 @@
 
 # Hint: use the random library's choice or randint method to choose a random value between 1 and 6.
 
+import random
+def throw_dice(a, b):
+    a = random.random(1, 6)
+    b = random.random(1, 6)
+    return a and b
+
+
+def roll_result(a, b):
+    sum = a + b
+    if sum <= 0:
+        print(f"The sum of your dice is {sum}. Unfortunately.")
+    elif sum >6 and sum < 10:
+        print(f"The sum of your dice is {sum}. You have a great chance.")
+    else:
+        print(f"The sum of your dice is {sum}. It looks like a winning roll.")
+
 
 
 # Interactions Between Functions Practice #2
@@ -40,6 +56,8 @@
 
 # Hint: Use the random library's choice method to choose an element at random from a sequence.
 
+# num = [2, 4, 59, 8, 11, 18]
+# def reduce_list(num):
 
 
 
