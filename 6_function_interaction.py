@@ -42,6 +42,11 @@ def roll_result(a, b):
 
 # Create a function called average() that can receive as an argument the list returned by the previous function, and that calculates the average of its values. It should return the result (a float), without printing it.
 
+num = [2, 4, 59, 8, 11, 18]
+def reduce_list(num):
+    num = dict(num)
+
+
 # \
 # Interactions Between Functions Practice #3
 # You must create a list with values and call it secret_codes.
@@ -56,8 +61,19 @@ def roll_result(a, b):
 
 # Hint: Use the random library's choice method to choose an element at random from a sequence.
 
-# num = [2, 4, 59, 8, 11, 18]
-# def reduce_list(num):
+import random
+secret_codes = [18, 5, 1, 21]
+def toss_coin():
+    a = random.random("Tails", "Heads")
+    return a
+toss_coin()
 
-
+def luck(a, secret_codes):
+    if a == "tails":
+        print("List will self-destruct")
+        secret_codes = [ ]
+        return secret_codes
+    else:
+        print("List was saved")
+        return secret_codes
 
