@@ -7,7 +7,7 @@ def tea_order(customer_name, tea_type, *args, **kwargs):
 
 tea_order("Alice", "chamomile") # Alice ordered a chamomile tea
 tea_order("Bob", "black", milk="oat") # Bob ordered a black tea; add: oat
-tea_order("Tony", "Black", milk="oat", sweetener="honey") # Tony ordered a black tea; add: oat, add: honey
+tea_order("Tony", "Black", "oat", sweetener="honey") # Tony ordered a black tea; add: oat, add: honey
 
 eves_extras = {"milk": "almond", "sweetener": "sugar", "flavor": "lemon"}
 tea_order("eve", "green", **eves_extras)
