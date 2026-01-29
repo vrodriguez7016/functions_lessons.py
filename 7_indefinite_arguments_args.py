@@ -20,10 +20,28 @@ tea_order("eve", "green", **eves_extras)
 # Create a function called sum_squares that takes any number of numeric arguments, and returns the sum of their values squared.
 
 # For example for the arguments sum_squares(1,2,3) it should return 14 (1+4+9).
+def sum_squares(*args):
+    total = 0 # Initialize total to 0
+    for num in args: # Iterate through each argument
+        total += num ** 2 # Add the square of the number to total
+        # first time through loop: total = 0 + 1^2 = 1
+        # second time through loop: total = 1 + 1^2 = 5
 
+    return total # return the total sum of squares
+print(sum_squares(1, 2, 3)) # Example usage
+print(sum_squares(4, 5, 6, 7, 8, 9)) # Example usage
 
 # Indefinite Arguments (*args) Practice #2
 # Create a function called absolute_sum, which takes any number of arguments, and returns the sum of their absolute values (that is, it takes the non-negative values and adds them together, in other words, considers them all - negative and positive - as positive).
+
+def absolute_sum(*args):
+    total = 0
+    for num in args:
+        total += abs(num)
+    return total
+print(absolute_sum(-1, 2, -3))
+print(absolute_sum(-10, 20, -30, 40, -50))
+
 
 # Indefinite Arguments (*args) Practice #3
 # Create a function called personal_numbers that receives, as its first argument, a name, and then an indefinite number of values.
@@ -31,3 +49,10 @@ tea_order("eve", "green", **eves_extras)
 # The function should return the following message:
 
 # "{name}, the sum of your numbers is {sum_numbers}"
+
+def personal_numbers(name, *args):
+    sum = 0
+    for num in args:
+        sum += num
+    print(f"{name}, the sum of your numbers is {sum}")
+personal_numbers("Vanessa", "18", "4", "9")
